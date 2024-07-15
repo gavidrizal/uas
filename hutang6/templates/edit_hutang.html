@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Hutang</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Edit Hutang</h2>
+      <form action="{{ url_for('edit_hutang', kode=kode) }}" method="post">
+        {{ form.hidden_tag() }}
+        <label for="id">Id:</label>
+        {{ form.id }}
+        <label for="kode">Kode:</label>
+        {{ form.kode }}
+        <label for="nama">Nama:</label>
+        {{ form.nama }}
+        <label for="harga">Harga:</label>
+        {{ form.harga }}
+        <label for="barang">Barang:</label>
+        {{ form.barang }}
+        <label for="tanggal">Tanggal:</label>
+        {{ form.tanggal }}
+        <button type="submit">Simpan</button>
+      </form>
+    </div>
+  </body>
+</html>
